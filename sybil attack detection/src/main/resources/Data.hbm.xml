@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Initial.Data" table="data" catalog="m0">
+        
+        <id name="Id" type="int">
+            <column name="id" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="sourceNode" type="int">
+            <column name="sourcenode" length="11" not-null="true" unique="true" />
+        </property>
+        <property name="destinationNode" type="int">
+            <column name="destinationnode" length="11" not-null="true" unique="true" />
+        </property>
+        <property name="intId" type="int">
+            <column name="intid" length="11" not-null="true" unique="true" />
+        </property>
+        <property name="malicious" type="int">
+            <column name="malicious" length="11" not-null="true" unique="true" />
+        </property>
+        <property name="hofNodes" type="string">
+            <column name="hofnodes" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="hofCount" type="int">
+            <column name="hofcount" length="11" not-null="true" unique="true" />
+        </property>
+    </class>
+</hibernate-mapping>

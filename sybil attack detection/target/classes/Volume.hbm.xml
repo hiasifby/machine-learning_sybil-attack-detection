@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="Initial.Volume" table="volume" catalog="m0">
+        
+        <id name="Id" type="int">
+            <column name="id" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="sdNode" type="string">
+            <column name="sdnode" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="distance" type="float">
+            <column name="distance" length="11" not-null="true" unique="true" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="45" not-null="true" unique="true" />
+        </property>
+        
+        
+    </class>
+</hibernate-mapping>
